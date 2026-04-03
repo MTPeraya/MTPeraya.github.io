@@ -1,13 +1,14 @@
 import { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import './BubbleMenu.css'; // <- your full CSS goes here
 
 const DEFAULT_ITEMS = [
-  { label: 'home', href: '#', ariaLabel: 'Home', rotation: -8, hoverStyles: { bgColor: '#3b82f6', textColor: '#ffffff' } },
-  { label: 'about', href: '#', ariaLabel: 'About', rotation: 8, hoverStyles: { bgColor: '#10b981', textColor: '#ffffff' } },
-  { label: 'projects', href: '#', ariaLabel: 'Projects', rotation: 8, hoverStyles: { bgColor: '#f59e0b', textColor: '#ffffff' } },
-  { label: 'blog', href: '#', ariaLabel: 'Blog', rotation: 8, hoverStyles: { bgColor: '#ef4444', textColor: '#ffffff' } },
-  { label: 'contact', href: '#', ariaLabel: 'Contact', rotation: -8, hoverStyles: { bgColor: '#8b5cf6', textColor: '#ffffff' } },
+  { label: 'home', href: '/', ariaLabel: 'Home', rotation: -8, hoverStyles: { bgColor: '#3b82f6', textColor: '#ffffff' } },
+  { label: 'about', href: '/about', ariaLabel: 'About', rotation: 8, hoverStyles: { bgColor: '#10b981', textColor: '#ffffff' } },
+  { label: 'projects', href: '/projects', ariaLabel: 'Projects', rotation: 8, hoverStyles: { bgColor: '#f59e0b', textColor: '#ffffff' } },
+  { label: 'blog', href: '/blog', ariaLabel: 'Blog', rotation: 8, hoverStyles: { bgColor: '#ef4444', textColor: '#ffffff' } },
+  { label: 'contact', href: '/contact', ariaLabel: 'Contact', rotation: -8, hoverStyles: { bgColor: '#8b5cf6', textColor: '#ffffff' } },
 ];
 
 export function BubbleMenu({
@@ -114,9 +115,10 @@ export function BubbleMenu({
           <ul className="pill-list" role="menu" aria-label="Menu links">
             {menuItems.map((item, idx) => (
               <li key={idx} role="none" className="pill-col">
-                <a
+                <Link
                   role="menuitem"
-                  href={item.href}
+                  to={item.href}
+                  onClick={() => setIsMenuOpen(false)}
                   aria-label={item.ariaLabel || item.label}
                   className="pill-link"
                   style={{
@@ -131,7 +133,7 @@ export function BubbleMenu({
                   <span className="pill-label" ref={el => el && (labelRefs.current[idx] = el)}>
                     {item.label}
                   </span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -145,12 +147,12 @@ export function BubbleMenu({
 export const BubbleMenuComponent = () => {
   return (
     <BubbleMenu
-      logo={<span style={{ fontWeight: 700 }}>RB</span>}
+      logo={<span style={{ fontWeight: 700 }}>MT</span>}
       items={DEFAULT_ITEMS}
       menuAriaLabel="Toggle navigation"
       menuBg="#ffffff"
       menuContentColor="#111111"
-      useFixedPosition={false}
+      useFixedPosition={true}
       animationEase="back.out(1.5)"
       animationDuration={0.5}
       staggerDelay={0.12}

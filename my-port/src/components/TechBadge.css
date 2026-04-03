@@ -1,0 +1,40 @@
+.tech-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  margin: 0.3rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tech-badge-solid {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+}
+
+.tech-badge-solid:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(33, 150, 243, 0.3);
+}
+
+.tech-badge-outline {
+  background-color: transparent;
+  border: 2px solid;
+  color: inherit;
+}
+
+.tech-badge-outline:hover {
+  background-color: rgba(33, 150, 243, 0.1);
+  transform: translateY(-2px);
+}
+
+.tech-badge-default {
+  background-color: #90CAF9;
+  color: white;
+  border: none;
+}
