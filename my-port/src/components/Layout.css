@@ -8,12 +8,15 @@
 }
 
 .layout-header {
-  background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
-  padding: 1rem 0;
-  box-shadow: 0 4px 20px rgba(33, 150, 243, 0.15);
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--glass-border);
   position: sticky;
   top: 0;
   z-index: 50;
+  box-shadow: var(--glass-shadow);
 }
 
 .header-container {
@@ -26,31 +29,38 @@
 }
 
 .logo {
-  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-size: clamp(1.6rem, 5vw, 2.2rem);
   font-weight: 800;
   margin: 0;
-  background: linear-gradient(135deg, #fff, #e3f2fd);
+  background: var(--color-accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  letter-spacing: -1px;
+  letter-spacing: -1.5px;
+  text-decoration: none;
 }
 
 .theme-toggle {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  color: var(--color-text);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
   cursor: pointer;
   font-size: 1.2rem;
-  transition: all 0.3s ease;
-  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .theme-toggle:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: scale(1.05);
+  background: rgba(128, 128, 128, 0.1);
+  transform: scale(1.08) rotate(15deg);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 .layout-main {
@@ -58,15 +68,17 @@
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
-  padding: 3rem 1.5rem;
+  padding: 4rem 1.5rem;
 }
 
 .layout-footer {
-  background: linear-gradient(135deg, rgba(33, 150, 243, 0.95), rgba(25, 118, 210, 0.95));
-  color: white;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--glass-border);
+  color: var(--color-text-muted);
   padding: 3rem 1.5rem;
   margin-top: 4rem;
-  backdrop-filter: blur(10px);
 }
 
 .footer-content {
@@ -81,8 +93,8 @@
 
 .footer-content p {
   margin: 0;
-  font-size: 0.95rem;
-  opacity: 0.95;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .footer-links {
@@ -91,14 +103,14 @@
 }
 
 .footer-links a {
-  color: white;
+  color: var(--color-text);
   text-decoration: none;
   transition: all 0.3s ease;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .footer-links a:hover {
-  opacity: 0.8;
+  color: var(--color-accent);
   transform: translateY(-2px);
 }
 

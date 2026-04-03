@@ -1,27 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
 :root {
-  --color-bg: #ffffff;
-  --color-text: #000000;
-  --color-accent: #007aff;
+  /* Light Mode - Elegant & Minimal */
+  --color-bg: #F8F9FA;
+  --color-text: #1C1E21;
+  --color-text-muted: #5F6368;
+  --color-accent: #4361EE;
+  --color-accent-hover: #3A0CA3;
+  --color-accent-gradient: linear-gradient(135deg, #4361EE 0%, #3A0CA3 100%);
+  
+  /* Soft Glass Layer */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
 }
 
-/* Dark mode */
 html[data-theme='dark'] {
-  --color-bg: #121212;
-  --color-text: #ffffff;
-  --color-accent: #0a84ff;
+  /* Dark Mode - Clean Dark Slate */
+  --color-bg: #0F1115;
+  --color-text: #F8F9FA;
+  --color-text-muted: #A0AAB2;
+  --color-accent: #4CC9F0;
+  --color-accent-hover: #4361EE;
+  --color-accent-gradient: linear-gradient(135deg, #4CC9F0 0%, #4361EE 100%);
+  
+  /* Dark Glass Layer */
+  --glass-bg: rgba(25, 28, 35, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
-/* Optional explicit light mode */
 html[data-theme='light'] {
-  --color-bg: #e7d4ed;
-  --color-text: #000000;
-  --color-accent: #007aff;
+  --color-bg: #F8F9FA;
+  --color-text: #1C1E21;
+  --color-text-muted: #5F6368;
+  --color-accent: #4361EE;
+  --color-accent-hover: #3A0CA3;
+  --color-accent-gradient: linear-gradient(135deg, #4361EE 0%, #3A0CA3 100%);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
 }
 
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   margin: 0;
-  font-family: system-ui, sans-serif;
+  font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+/* Base Utility for Glassmorphism */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+.scroll-section {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+

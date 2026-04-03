@@ -24,12 +24,21 @@
   width: var(--bubble-size);
   height: var(--bubble-size);
   border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   pointer-events: auto;
+  transition: all 0.3s ease;
+}
+
+.bubble-menu .bubble:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 8px 32px 0 rgba(67, 97, 238, 0.2);
 }
 
 .bubble-menu .logo-bubble,
@@ -46,7 +55,7 @@
 
 .bubble-menu .menu-btn {
   border: none;
-  background: #fff;
+  background: transparent;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -58,18 +67,23 @@
 .bubble-menu .menu-line {
   width: 26px;
   height: 2px;
-  background: #111;
+  background: var(--color-text);
   border-radius: 2px;
   display: block;
   margin: 0 auto;
   transition:
     transform 0.3s ease,
-    opacity 0.3s ease;
+    opacity 0.3s ease,
+    background 0.3s ease;
   transform-origin: center;
 }
 
 .bubble-menu .menu-line + .menu-line {
   margin-top: 6px;
+}
+
+.bubble-menu .menu-btn:hover .menu-line {
+  background: var(--color-accent);
 }
 
 .bubble-menu .menu-btn.open .menu-line:first-child {
@@ -87,6 +101,7 @@
 
   .bubble-menu .logo-bubble {
     padding: 0 16px;
+    border-radius: 28px;
   }
 }
 
@@ -147,31 +162,37 @@
 }
 
 .bubble-menu-items .pill-link {
-  --pill-bg: #ffffff;
-  --pill-color: #111;
-  --pill-border: rgba(0, 0, 0, 0.12);
+  --pill-bg: var(--glass-bg);
+  --pill-color: var(--color-text);
+  --pill-border: var(--glass-border);
   --item-rot: 0deg;
   --pill-min-h: 160px;
-  --hover-bg: #f3f4f6;
-  --hover-color: #111;
+  --hover-bg: var(--color-accent);
+  --hover-color: #ffffff;
+  
   width: 100%;
   min-height: var(--pill-min-h);
   padding: clamp(1.5rem, 3vw, 8rem) 0;
   font-size: clamp(1.5rem, 4vw, 4rem);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 0;
   border-radius: 999px;
   background: var(--pill-bg);
   color: var(--pill-color);
+  border: 1px solid var(--pill-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--glass-shadow);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   transition:
     background 0.3s ease,
-    color 0.3s ease;
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
   will-change: transform;
   box-sizing: border-box;
   white-space: nowrap;
@@ -188,6 +209,8 @@
     transform: rotate(var(--item-rot)) scale(1.06);
     background: var(--hover-bg);
     color: var(--hover-color);
+    border-color: var(--color-accent);
+    box-shadow: 0 10px 40px rgba(67, 97, 238, 0.4);
   }
 
   .bubble-menu-items .pill-link:active {
@@ -229,6 +252,7 @@
     transform: scale(1.06);
     background: var(--hover-bg);
     color: var(--hover-color);
+    border-color: var(--color-accent);
   }
 
   .bubble-menu-items .pill-link:active {
