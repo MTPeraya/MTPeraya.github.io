@@ -1,13 +1,13 @@
 import { useState, useRef, useEffect } from 'react';
 import './BubbleMenu.css'; 
 import { gsap } from 'gsap';
+import { Sun, Moon } from 'lucide-react';
 
 const DEFAULT_ITEMS = [
   { label: 'home', href: '#home', ariaLabel: 'Home', rotation: -8, hoverStyles: { bgColor: '#3b82f6', textColor: '#ffffff' } },
   { label: 'about', href: '#about', ariaLabel: 'About', rotation: 8, hoverStyles: { bgColor: '#10b981', textColor: '#ffffff' } },
   { label: 'projects', href: '#projects', ariaLabel: 'Projects', rotation: 8, hoverStyles: { bgColor: '#f59e0b', textColor: '#ffffff' } },
   { label: 'skills', href: '#skills', ariaLabel: 'Skills', rotation: 8, hoverStyles: { bgColor: '#ec4899', textColor: '#ffffff' } },
-  { label: 'blog', href: '#blog', ariaLabel: 'Blog', rotation: 8, hoverStyles: { bgColor: '#ef4444', textColor: '#ffffff' } },
   { label: 'contact', href: '#contact', ariaLabel: 'Contact', rotation: -8, hoverStyles: { bgColor: '#8b5cf6', textColor: '#ffffff' } },
 ];
 
@@ -23,7 +23,9 @@ export function BubbleMenu({
   items,
   animationEase = 'back.out(1.5)',
   animationDuration = 0.5,
-  staggerDelay = 0.12
+  staggerDelay = 0.12,
+  theme,
+  toggleTheme,
 }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
@@ -108,6 +110,24 @@ export function BubbleMenu({
           <span className="menu-line" style={{ background: menuContentColor }} />
           <span className="menu-line short" style={{ background: menuContentColor }} />
         </button>
+
+        {toggleTheme && (
+          <button
+            type="button"
+            className={`bubble theme-pill ${theme === 'dark' ? 'is-dark' : 'is-light'}`}
+            onClick={toggleTheme}
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            style={{ background: menuBg }}
+          >
+            <div className="theme-thumb" style={{ background: menuContentColor }} />
+            <div className="theme-icon-container">
+              <Sun size={20} strokeWidth={2.5} className="theme-icon sun" />
+            </div>
+            <div className="theme-icon-container">
+              <Moon size={20} strokeWidth={2.5} className="theme-icon moon" />
+            </div>
+          </button>
+        )}
       </nav>
 
       {showOverlay && (
@@ -144,7 +164,7 @@ export function BubbleMenu({
 }
 
 // Example usage
-export const BubbleMenuComponent = () => {
+export const BubbleMenuComponent = ({ theme, toggleTheme }) => {
   return (
     <BubbleMenu
       logo={<span style={{ fontWeight: 700 }}>MT</span>}
@@ -156,6 +176,8 @@ export const BubbleMenuComponent = () => {
       animationEase="back.out(1.5)"
       animationDuration={0.5}
       staggerDelay={0.12}
+      theme={theme}
+      toggleTheme={toggleTheme}
     />
   );
 };

@@ -4,13 +4,6 @@ import "./Layout.css";
 export const Layout = ({ children, theme, toggleTheme }) => {
   return (
     <div className="layout">
-      <header className="layout-header">
-        <div className="header-container">
-          <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle dark mode">
-            {theme === "dark" ? "☀️" : "🌙"}
-          </button>
-        </div>
-      </header>
 
       <main className="layout-main">{children}</main>
 

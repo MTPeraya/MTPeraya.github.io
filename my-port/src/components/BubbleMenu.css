@@ -1,22 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap');
+
 .bubble-menu {
-  left: 0;
-  right: 0;
-  top: 2em;
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  padding: 0 2em;
-  pointer-events: none;
+  padding: 1rem 1.5rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--glass-border);
   z-index: 99;
 }
 
 .bubble-menu.fixed {
-  position: fixed;
+  position: sticky;
 }
 
 .bubble-menu.absolute {
-  position: absolute;
+  position: relative;
 }
 
 .bubble-menu .bubble {
@@ -46,12 +49,64 @@
   will-change: transform;
 }
 
-
-.bubble-menu .toggle-bubble {
-  width: var(--bubble-size);
+.bubble-menu .theme-pill {
+  width: calc(var(--bubble-size) * 1.8);
   height: var(--bubble-size);
+  border-radius: calc(var(--bubble-size) / 2);
+  border: 1px solid var(--glass-border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 4px;
 }
 
+.bubble-menu .theme-thumb {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  width: calc(var(--bubble-size) - 10px);
+  border-radius: 50%;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.bubble-menu .theme-pill.is-light .theme-thumb {
+  transform: translateX(0);
+}
+
+.bubble-menu .theme-pill.is-dark .theme-thumb {
+  transform: translateX(calc(var(--bubble-size) * 0.8 + 2px));
+}
+
+.bubble-menu .theme-icon-container {
+  width: calc(var(--bubble-size) - 8px);
+  height: calc(var(--bubble-size) - 8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.bubble-menu .theme-icon {
+  transition: color 0.3s ease;
+}
+
+/* Colors for icons depending on state */
+.bubble-menu .theme-pill.is-light .sun {
+  color: var(--glass-bg); /* inverse color since it's over the thumb */
+}
+.bubble-menu .theme-pill.is-light .moon {
+  color: var(--color-text);
+}
+
+.bubble-menu .theme-pill.is-dark .sun {
+  color: var(--color-text);
+}
+.bubble-menu .theme-pill.is-dark .moon {
+  color: var(--glass-bg); /* inverse color since it's over the thumb */
+}
 
 .bubble-menu .menu-btn {
   border: none;

@@ -35,7 +35,7 @@ function App() {
 
   return (
     <Router basename="/">
-      <BubbleMenuComponent />
+      <BubbleMenuComponent theme={theme} toggleTheme={toggleTheme} />
       <Layout theme={theme} toggleTheme={toggleTheme}>
         <Routes>
           <Route path="/" element={<Home />} />
