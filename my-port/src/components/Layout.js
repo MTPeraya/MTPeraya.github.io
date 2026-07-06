@@ -6,7 +6,6 @@ export const Layout = ({ children, theme, toggleTheme }) => {
     <div className="layout">
       <header className="layout-header">
         <div className="header-container">
-          <h1 className="logo">MTPeraya</h1>
           <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle dark mode">
             {theme === "dark" ? "☀️" : "🌙"}
           </button>

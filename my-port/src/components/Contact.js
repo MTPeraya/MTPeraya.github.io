@@ -65,18 +65,6 @@ export const Contact = () => {
               </a>
               <p className="method-note">[UPDATE WITH YOUR GITHUB URL]</p>
             </div>
-
-            <div className="contact-method">
-              <h3>🐦 Twitter/X</h3>
-              <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer">
-                Follow me
-              </a>
-              <p className="method-note">[UPDATE WITH YOUR TWITTER/X URL]</p>
-            </div>
-          </div>
-
-          <div className="contact-response-time">
-            <p>💬 I typically respond within 24-48 hours</p>
           </div>
         </div>
 

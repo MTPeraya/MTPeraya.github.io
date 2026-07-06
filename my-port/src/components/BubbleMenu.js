@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import './BubbleMenu.css'; // <- your full CSS goes here
+import './BubbleMenu.css'; 
 import { gsap } from 'gsap';
 
 const DEFAULT_ITEMS = [

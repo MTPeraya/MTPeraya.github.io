@@ -7,7 +7,6 @@ import { Layout } from './components/Layout';
 import { About } from './components/About';
 import { Projects } from './components/Projects';
 import { Skills } from './components/Skills';
-import { Blog } from './components/Blog';
 import { Contact } from './components/Contact';
 
 // Home page
@@ -27,7 +26,6 @@ const Home = () => (
     <div id="about" className="scroll-section"><About /></div>
     <div id="projects" className="scroll-section"><Projects /></div>
     <div id="skills" className="scroll-section"><Skills /></div>
-    <div id="blog" className="scroll-section"><Blog /></div>
     <div id="contact" className="scroll-section"><Contact /></div>
   </div>
 );
