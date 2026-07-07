@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowRight, Code2, Sparkles, Terminal } from "lucide-react";
 import "./Hero.css";
+import TextType from './TextType';
 
 export const Hero = () => {
   const scrollToSection = (id) => {
@@ -14,9 +15,16 @@ export const Hero = () => {
     <section className="hero">
       <div className="hero-container">
         <div className="hero-content">
-          
+          <div className="hero-greeting">
+            <TextType 
+                  text={["Hello! I'm Mint...","Sawasdee! I'm Mint..."]}
+                  typingSpeed={100}
+                  pauseDuration={3000}
+                  showCursor
+                  cursorCharacter="_"/>
+          </div>
           <h1 className="hero-title">
-            Hi, I'm <span className="text-gradient">Peraya Leangsongchai</span>
+            <span className="text-gradient"> Peraya Leangsongchai</span>
             <br />
             <span className="hero-title-sub">Software Engineer</span>
           </h1>
