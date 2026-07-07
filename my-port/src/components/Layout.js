@@ -9,15 +9,21 @@ export const Layout = ({ children, theme, toggleTheme }) => {
 
       <footer className="layout-footer">
         <div className="footer-content">
-          <p>&copy; 2026 MTPeraya. All rights reserved.</p>
+          <p>&copy; 2026 Peraya Leangsongchai. All rights reserved.</p>
           <div className="footer-links">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/MTPeraya"
+              target="_blank"
+              rel="noopener noreferrer">
               GitHub
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+
+            <a href="https://www.linkedin.com/in/peraya-lsc/"
+              target="_blank"
+              rel="noopener noreferrer">
               LinkedIn
             </a>
-            <a href="mailto:hello@example.com">Email</a>
+            
+            <a href="mailto:m.perayalsc@gmail.com">Email</a>
           </div>
         </div>
       </footer>

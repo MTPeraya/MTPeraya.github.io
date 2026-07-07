@@ -8,8 +8,9 @@ export const About = () => {
     <section className="about">
       <div className="about-hero">
         <div className="hero-content">
-          <h1 className="hero-title">Software Engineer & Full Stack Developer</h1>
+          <h1 className="hero-title">Peraya Leangsongchai</h1>
           <p className="hero-subtitle">
+            Software Engineer & Full Stack Developer
             Building scalable, efficient, and user-focused applications with modern technologies.
           </p>
 
