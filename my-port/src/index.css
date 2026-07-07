@@ -2,7 +2,7 @@
 
 :root {
   /* Light Mode - Elegant & Minimal */
-  --color-bg: #F8F9FA;
+  --color-bg: #DCE1E7;
   --color-text: #1C1E21;
   --color-text-muted: #5F6368;
   --color-accent: #4361EE;
@@ -31,7 +31,7 @@ html[data-theme='dark'] {
 }
 
 html[data-theme='light'] {
-  --color-bg: #F8F9FA;
+  --color-bg: #DCE1E7;
   --color-text: #1C1E21;
   --color-text-muted: #5F6368;
   --color-accent: #4361EE;
