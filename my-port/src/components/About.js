@@ -6,28 +6,6 @@ import { TechBadge } from "./TechBadge";
 export const About = () => {
   return (
     <section className="about">
-      <div className="about-hero">
-        <div className="hero-content">
-          <h1 className="hero-title">Peraya Leangsongchai</h1>
-          <p className="hero-subtitle">
-            Software Engineer & Full Stack Developer
-            Building scalable, efficient, and user-focused applications with modern technologies.
-          </p>
-
-          <div className="hero-cta">
-            <Link to="/projects" className="btn btn-primary">
-              View My Projects
-            </Link>
-            <Link to="/contact" className="btn btn-secondary">
-              Get In Touch
-            </Link>
-          </div>
-        </div>
-        <div className="hero-visual">
-          <div className="hero-avatar">[Avatar/Profile Image]</div>
-        </div>
-      </div>
-
       <div className="about-intro">
         <h2>About Me</h2>
         <p className="intro-text">

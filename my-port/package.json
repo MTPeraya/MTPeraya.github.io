@@ -8,6 +8,8 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "baseline-browser-mapping": "^2.10.42",
+    "caniuse-lite": "^1.0.30001803",
     "gsap": "^3.13.0",
     "lucide-react": "^1.23.0",
     "motion": "^12.23.22",
