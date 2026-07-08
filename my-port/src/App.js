@@ -15,10 +15,10 @@ import SpaceDust from './components/SpaceDust';
 const Home = () => (
   <div className="scroll-container">
     <div id="home"><Hero /></div>
-    {/*div id="projects" className="scroll-section"><Projects /></div*/}
-    {/*<div id="about" className="scroll-section"><About /></div> */} 
-    {/*div id="skills" className="scroll-section"><Skills /></div*/}
-    {/*div id="contact" className="scroll-section"><Contact /></div*/}
+    <div id="projects" className="scroll-section"><Projects /></div>
+    <div id="about" className="scroll-section"><About /></div> 
+    <div id="skills" className="scroll-section"><Skills /></div>
+    <div id="contact" className="scroll-section"><Contact /></div>
   </div>
 );
 

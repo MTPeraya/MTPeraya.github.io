@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
 :root {
   /* Light Mode - Elegant & Minimal */
   --color-bg: #DCE1E7;
+  --color-card-bg: #ffffff;
   --color-text: #1C1E21;
   --color-text-muted: #5F6368;
   --color-accent: #4361EE;
@@ -18,6 +27,7 @@
 html[data-theme='dark'] {
   /* Dark Mode - Clean Dark Slate */
   --color-bg: #000000;
+  --color-card-bg: #111216;
   --color-text: #ff86c8;
   --color-text-muted: #A0AAB2;
   --color-accent: #fdcce0;
@@ -32,6 +42,7 @@ html[data-theme='dark'] {
 
 html[data-theme='light'] {
   --color-bg: #DCE1E7;
+  --color-card-bg: #ffffff;
   --color-text: #1C1E21;
   --color-text-muted: #5F6368;
   --color-accent: #4361EE;
@@ -69,16 +80,19 @@ html {
 }
 
 .scroll-section {
-  padding: 4rem 1rem;
+  padding: 0rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
-  box-sizing: border-box;
+}
+
+#projects.scroll-section {
+  max-width: 1400px;
 }
 
 .scroll-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 0.25rem;
 }
 
