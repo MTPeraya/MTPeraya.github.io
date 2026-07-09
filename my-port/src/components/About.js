@@ -17,11 +17,14 @@ export const About = () => {
         {/* Large bio card */}
         <div className="bento-card bento-bio">
           <p className="bio-text">
-            [YOUR INTRODUCTION HERE] — Replace this with a brief overview of who you are, your background, and what drives your passion for software development. 2-3 sentences.
+            I'm a software engineer with a passion for building products that make
+            a real difference. My journey into tech started with a single coding
+            class, and since then I've focused on writing clean, efficient code
+            that solves meaningful problems.
           </p>
           <div className="bio-meta">
-            <span><MapPin size={14} /> [Your Location]</span>
-            <span><Coffee size={14} /> Fuelled by coffee</span>
+            <span><MapPin size={14} /> Bangkok, Thailand</span>
+            <span><Coffee size={14} /> Fuelled by Cocoa</span>
           </div>
         </div>
 
@@ -30,10 +33,11 @@ export const About = () => {
           <Lightbulb size={28} className="facts-icon" />
           <h3>Quick Facts</h3>
           <ul className="facts-list">
-            <li>🎓 [Your Degree / University]</li>
-            <li>💼 [Years] years of experience</li>
-            <li>🌏 Open to remote work</li>
+            <li>🎓 Software and Knowledge Engineering Junior @Kasetsart University</li>
             <li>📚 Always learning</li>
+            <li>💼 years of experience</li>
+            <li>🌏 Open to work internationally</li>
+            
           </ul>
         </div>
 

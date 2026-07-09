@@ -53,9 +53,9 @@ export const Hero = () => {
           </div>
 
           <p className="hero-description">
-            Software Engineer &amp; Full Stack Developer. I specialize in building
-            scalable, efficient, and user-focused applications with modern technologies.
-            Transforming ideas into elegant code.
+            I'm a Software Engineer & Full Stack Developer who loves turning
+            ideas into working products. I care about clean code, thoughtful
+            design, and building things people actually enjoy using.
           </p>
 
           <div className="hero-cta-group">
@@ -83,7 +83,7 @@ export const Hero = () => {
             <div className="hero-photo-placeholder">
               {/* Replace the content below with <img src="your-photo.jpg" alt="Peraya" /> */}
               <span className="photo-emoji">👩🏻‍💻</span>
-              <span className="photo-hint">Add your photo here</span>
+              {/*<span className="photo-hint">Add your photo here</span>*/}
             </div>
           </div>
 
@@ -92,7 +92,7 @@ export const Hero = () => {
             <span>🚀</span> Open to Work
           </div>
           <div className="hero-chip chip-bottom">
-            <span>⚡</span> Fast Learner
+            <span>🎮</span> Gamer Turned Dev
           </div>
         </div>
       </div>
